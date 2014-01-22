@@ -1,0 +1,106 @@
+x-status-hud, x-status-hud strong, x-status-hud div {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+x-status-hud {
+  display: block;
+  min-width: 50%;
+  max-width: 60%;
+  min-height: 5em;
+  max-height: 30%;
+  line-height: 100%;
+  font-family: sans-serif;
+  color: #000;
+  overflow: hidden;
+  padding: 8%;
+  margin: 0 auto;
+  -webkit-border-radius: .15em;
+  border-radius: 1em;
+  border: 1px solid rgba(0,0,0,0.5);
+  background: rgba(255,255,255,0.5);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5); 
+}
+
+x-status-hud strong {
+  display: inline-block;
+  margin: 1.5em 0px 0px;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  word-wrap: break-word;
+  z-index: 1;
+  font-weight: normal;
+}
+
+x-status-hud[visible] {
+  z-index: 999;
+  visibility: visible;
+}
+
+x-status-hud:not([visible]) {
+  visibility: hidden;
+}
+
+
+/**
+ * (C)Leanest CSS spinner ever
+ * CSS Spinner via Lea Verou (http://dabblet.com/gist/7615212)
+ */
+
+@keyframes spin {
+  to { transform: rotate(1turn); }
+}
+
+.spinner {
+  position: relative;
+  width: 5em;
+  height: 5em;
+  margin: 0 auto;
+  font-size: 10px;
+  text-indent: 999em;
+  overflow: hidden;
+  animation: spin 1s infinite steps(8);
+}
+
+.spinner:before,
+.spinner:after,
+.spinner > div:before,
+.spinner > div:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2.25em; /* (container width - part width)/2  */
+  width: .5em;
+  height: 1.5em;
+  border-radius: .2em;
+  background: #eee;
+  box-shadow: 0 3.5em #eee; /* container height - part height */
+  transform-origin: 50% 2.5em; /* container height / 2 */
+}
+
+.spinner:before {
+  background: #555;
+}
+
+.spinner:after {
+  transform: rotate(-45deg);
+  background: #777;
+}
+
+.spinner > div:before {
+  transform: rotate(-90deg);
+  background: #999;
+}
+
+.spinner > div:after {
+  transform: rotate(-135deg);
+  background: #bbb;
+}
+
+
+

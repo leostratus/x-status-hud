@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="lib/brick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="src/x-status-hud.css">
+    <link rel="stylesheet" type="text/css" href="demo-assets/demo.css">
+    <title>Brick Status HUD Component</title>
+</head>
+<body>
+    <h1>Brick Status HUD Demo</h1>
+    <x-status-hud id="test"></x-status-hud>
+	<script type="text/javascript" src="lib/x-tag-core.js"></script>
+    <script type="text/javascript" src="src/x-status-hud.js"></script>
+      <script type="text/javascript">
+        document.addEventListener('DOMComponentsLoaded', function(){
+            // Any HUD customizations should be done here.
+            var testHUD = document.getElementById("test");
+            testHUD.label = "Please Wait...";
+            testHUD.show();
+        }, false);
+    </script>
+</body>
+</html>
