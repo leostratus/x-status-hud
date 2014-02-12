@@ -1,7 +1,7 @@
 /* Styles that make the demo lovelier */
 
 body{
-	background: url("stardust.png");
+	background: #fff;
 }
 
 h1 {
@@ -17,30 +17,5 @@ h1 {
 
 x-status-hud{
   margin-top: 3em;
-}
-
-/* Customize spinner state colors so that they're not washed out on our background */
-
-.spinner:before,
-.spinner:after,
-.spinner > div:before,
-.spinner > div:after {
-  background: #eee;
-}
-
-.spinner:before {
-  background: #555;
-}
-
-.spinner:after {
-  background: #777;
-}
-
-.spinner > div:before {
-  background: #999;
-}
-
-.spinner > div:after {
-  background: #bbb;
 }
 
